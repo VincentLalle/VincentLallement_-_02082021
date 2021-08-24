@@ -16,13 +16,14 @@
     margin: 20px;
 }
 .icon_back{
-    position: relative;
+    position: absolute;
     font-size: 25px;
-    left: -760px; 
+    left: 150px; 
 }
 
 /* Fond d'écran header*/
 .img_back{
+    
     display: flex;
     width: 100%;
     height: 550px;
@@ -35,10 +36,11 @@
     max-width: 1440px;
     margin: auto;
     position: relative;
-    top: -50px;
+    margin-top: -50px;
     background-color: #f6f6f6;
     border-radius: 50px 50px 0px 0px ;
-    height: 600px;
+    height: 650px;
+    z-index: 0;
 }
 .title_menu{
     font-family: 'Shrikhand', cursive;
@@ -46,16 +48,22 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-left: 20px;
+    margin: 20px 20px;
+}
+.title_h3{
+    margin: 0;
+    margin-top: 30px;
 }
 .heart{
-    position: relative;
-    right: -1110px;
+    position: absolute;
+    top : 10px;
+    right: 50px;
 }
 .menu_grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    margin-top: 40px;
 }
 .menu_grid_bloc{
     display: flex;
@@ -85,7 +93,6 @@
     display: flex;
     justify-content: end;
     font-weight: bold;
-    
 }
 .dish_price{
     display: flex;
@@ -104,7 +111,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 .btn_pink{
     border-radius: 25px;
@@ -117,13 +124,19 @@
     font-size: 20px;
 }
 .check{
-    display: none;
+    display: flex;
+    position: absolute;
+    visibility: hidden;
+}
+.menu_case_price:hover{
+    transition: margin-right 2s;
+}
+.checck:hover{
+    visibility: visible;
 }
 
 /* Footer */
 .footer{
-    position: relative;
-    top: -50px;
     background-color: #353535;
     color: white;
 }
@@ -131,7 +144,7 @@
     width: 100%;
     max-width: 1440px;
     margin: auto;
-    padding: 30px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
 }
