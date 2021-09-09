@@ -3,6 +3,7 @@
 /* Primary color violet : #9356DC */
 /* Secondary color rose : #FF79DA */
 /* Tertiaire color mint : #99E2D0 */
+
 .html {
   font-family: 'Roboto', sans-serif;
 }
@@ -38,14 +39,12 @@
   margin-left:-80px;
   animation:load 1.2s ease-in-out infinite;
   overflow: auto;
-  
 }
 @keyframes load{
 0% {transform:rotate(0deg)
 }
 100% {transform:rotate(360deg)
 }}
-
 @keyframes loading{
 0% {
   visibility: visible;
@@ -57,7 +56,6 @@
   opacity: 0;
   visibility: hidden;
 }}
-
 
 /* Logo */
 .logo{
@@ -384,6 +382,7 @@
 .footer_blocs{
   flex-direction: column;
 }}
+
 @media screen and (max-width: 500px) {
 .blocs_functioning {
   margin: auto;
@@ -401,12 +400,3 @@
   justify-content: flex-start;
   margin-left: 30px;
 }}
-
-/* 
-
-opacity: 1;
-        transition: 0.4s ease-in;
-opacity: 0;
-        transition: 0.4s ease-in;
-
-*/
