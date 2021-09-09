@@ -16,32 +16,48 @@
 .loading{
   position:absolute;
   width:100%;
-  min-height:100vh;
-  background-color: white;
+  min-height:117vh;
+  background-color: rgba(255, 255, 255, 0.747);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 20;
+  z-index: 1;
   visibility: hidden;
+  animation: loading 3s linear;
 }
 .load{
   width:160px;
   height:160px;
   border-radius:150px;
-  border:15px solid #fff;
-  border-top-color:rgba(0,0,0,0.3);
+  border:15px solid #9356DC;
+  border-top-color: #FF79DA;
   box-sizing:border-box;
   position:absolute;
   top:50%;left:50%;
   margin-top:-80px;
   margin-left:-80px;
-  animation:loading 1.2s linear infinite;
-  z-index: 20;
+  animation:load 1.2s ease-in-out infinite;
+  overflow: auto;
+  
 }
+@keyframes load{
+0% {transform:rotate(0deg)
+}
+100% {transform:rotate(360deg)
+}}
+
 @keyframes loading{
-  0%{transform:rotate(0deg)}
-  100%{transform:rotate(360deg)}
+0% {
+  visibility: visible;
+  opacity: 0.9;}
+70%{
+  opacity: 0.5;
 }
+100% {
+  opacity: 0;
+  visibility: hidden;
+}}
+
 
 /* Logo */
 .logo{
@@ -237,8 +253,8 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   width: 100px;
   height: 30px;
 }
@@ -253,10 +269,26 @@
   font-family: 'Roboto', sans-serif;
   color: #008766;
 }
-.heart {
+.heart_empty {
   position: absolute;
-  right: 30px;
-  bottom: 10px;
+  right: 20px;
+  bottom: 20px;
+  visibility: visible;
+}
+.heart_full {
+  visibility: hidden;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.heart_btn:hover .fas{
+  visibility: visible;
+}
+.heart_btn:hover .far{
+  visibility: hidden;
 }
 .restaurant_card a {
   text-decoration: none;
@@ -268,8 +300,8 @@
   transition: ease 0.3s;
   box-shadow: 0px 0px 12px 2px #9356DC;
 }
-.far:hover {
-  background-color: #FF79DA;
+.fa, .far, .fas {
+  font-family: "Font Awesome 5 Free";
 }
 
 /* Footer */
@@ -378,4 +410,3 @@ opacity: 0;
         transition: 0.4s ease-in;
 
 */
-/*# sourceMappingURL=style.css.map */
