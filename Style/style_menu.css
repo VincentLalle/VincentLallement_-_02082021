@@ -1,0 +1,41 @@
+/* Variable */
+/* Mixin */
+/* Corp du site */
+.html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.body {
+  margin: 0;
+}
+
+p, h4 {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Logo */
+.bloc_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.img_logo {
+  width: 200px;
+  margin: 20px;
+}
+
+.icon_back {
+  position: absolute;
+  font-size: 25px;
+  left: 100px;
+}
+/*# sourceMappingURL=style_menu.css.map */
