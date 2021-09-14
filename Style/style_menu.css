@@ -12,9 +12,9 @@
 
 p, h4 {
   margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Logo */
@@ -88,7 +88,7 @@ p, h4 {
   margin-top: -70px;
   background-color: #f6f6f6;
   border-radius: 50px 50px 0px 0px;
-  height: 630px;
+  height: 550px;
 }
 
 .title_menu {
@@ -110,13 +110,6 @@ p, h4 {
 }
 
 .menu_grid_bloc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin: 0px 20px;
 }
 
@@ -133,14 +126,14 @@ p, h4 {
 }
 
 .menu_grid_case {
+  position: relative;
+  cursor: pointer;
   background-color: #fff;
   border-radius: 20px;
   margin: 10px;
   padding: 10px;
   -webkit-box-shadow: 4px 4px 6px #aaa;
           box-shadow: 4px 4px 6px #aaa;
-  position: relative;
-  cursor: pointer;
   -webkit-transition: padding-right 0.3s ease-in-out;
   transition: padding-right 0.3s ease-in-out;
 }
@@ -152,10 +145,6 @@ p, h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: normal;
 }
 
 .icon_check {
@@ -377,11 +366,28 @@ p, h4 {
   text-decoration: none;
 }
 
-/* Section Media Queries */
+/*Section Media Queries */
 @media screen and (max-width: 1310px) {
   .img_back {
     height: 350px;
   }
+  .menu_grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu_grid_bloc {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .menu {
     height: 1200px;
   }
@@ -395,15 +401,21 @@ p, h4 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    max-width: 600px;
     margin: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .menu_grid_bloc {
-    margin-bottom: 30px;
+  .menu_grid_case {
+    width: 350px;
   }
 }
 
 @media screen and (max-width: 800px) {
+  .menu_grid_case {
+    width: 350px;
+  }
   .footer {
     padding: 0px;
     height: 197px;
@@ -432,6 +444,9 @@ p, h4 {
   }
   .icon_back {
     position: initial;
+  }
+  .menu_grid_case {
+    width: 280px;
   }
 }
 /*# sourceMappingURL=style_menu.css.map */
