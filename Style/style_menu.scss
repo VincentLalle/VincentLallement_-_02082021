@@ -66,6 +66,7 @@ p, h4{
     right: 20px;
     top: 20px;
     background: $background;
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
