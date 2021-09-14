@@ -383,6 +383,7 @@
   right: 20px;
   bottom: 20px;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -475,10 +476,8 @@
   .restaurant_card_list {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: (1fr)[4];
-        grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
   }
   .restaurant {
     height: 1550px;
