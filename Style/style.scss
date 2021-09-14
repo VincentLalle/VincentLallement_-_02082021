@@ -254,6 +254,7 @@ $background: linear-gradient(170deg, #FF79DA, #9356DC);
     right: 20px;
     bottom: 20px;
     background: $background;
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
