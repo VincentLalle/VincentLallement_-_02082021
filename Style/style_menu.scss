@@ -20,9 +20,9 @@ $background: linear-gradient(170deg, #FF79DA, #9356DC);
 }
 p, h4{
     margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* Logo */
@@ -81,7 +81,7 @@ p, h4{
     margin-top: -70px;
     background-color: #f6f6f6;
     border-radius: 50px 50px 0px 0px ;
-    height: 630px;
+    height: 550px;
 }
 .title_menu{
     font-family: 'Shrikhand', cursive;
@@ -97,8 +97,6 @@ p, h4{
     max-width: 1440px;
 }
 .menu_grid_bloc{
-    display: flex;
-    flex-direction: column;
     margin: 0px 20px;
 }
 .grid_title{
@@ -112,20 +110,18 @@ p, h4{
     margin: 10px 0px;
 }
 .menu_grid_case{
+    position: relative; 
+    cursor: pointer;
     background-color: #fff;
     border-radius: 20px;
     margin: 10px;
     padding: 10px;
     box-shadow: 4px 4px 6px #aaa;
-    position: relative;
-    cursor: pointer;
     transition: padding-right 0.3s ease-in-out;
 }
 .menu_case_dish{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    line-height: normal;
 }
 .icon_check{
     display: flex;
@@ -261,23 +257,35 @@ p, h4{
     text-decoration: none;
 }
 
-/* Section Media Queries */
+/*Section Media Queries */
 @media screen and (max-width: 1310px) {
 .img_back{
     height: 350px;
 }
-.menu{
-    height: 1200px;
-}
 .menu_grid{
     @include flexbox-center;
-    max-width: 600px;
-    margin: auto;
+    
 }
 .menu_grid_bloc{
     margin-bottom: 30px;
 }}
+@media screen and (max-width: 1200px){
+.menu{
+    height: 1200px
+}
+.menu_grid{
+    @include flexbox-center;
+    margin: auto;
+    flex-direction: column;
+}
+.menu_grid_case{
+    width: 350px;
+}
+}
 @media screen and (max-width: 800px){
+.menu_grid_case{
+    width: 350px;
+}
 .footer{
     padding: 0px;
     height: 197px;
@@ -293,4 +301,8 @@ p, h4{
 }
 .icon_back{
     position: initial;
-}}
+}
+.menu_grid_case{
+    width: 280px;
+}
+}
